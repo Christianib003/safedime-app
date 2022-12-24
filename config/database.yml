@@ -17,6 +17,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: safedime_production
   username: safedime
   password: <%= ENV["SAFEDIME_DATABASE_PASSWORD"] %>
