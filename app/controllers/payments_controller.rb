@@ -24,7 +24,7 @@ class PaymentsController < ApplicationController
 
     another_category = params[:payment][:cat_id]
     @payment.categories << Category.find(another_category) unless another_category.blank?
-    @payment.user_id = current_user.id
+    @payment.author_id = current_user.id
 
     respond_to do |format|
       if @payment.save
