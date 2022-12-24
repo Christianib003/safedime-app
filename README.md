@@ -14,13 +14,14 @@
 
 # 📖 [SafeDime] <a name="SafeDime"></a>
 
-> AnyDime is a mobile application that a helps a user to categorize, track and manage their expenses.
+> SafeDime is a mobile application that a helps a user to categorize, track and manage their expenses.
 
-## Screenshot
+## Media
 
 ![image](https://user-images.githubusercontent.com/91727952/208682288-9dd3ccec-4aa9-47e9-8784-2d381fd4d3a4.png)
 ![image](https://user-images.githubusercontent.com/91727952/208682141-ca271a18-7da6-4a44-833c-39e43d5a07db.png)
-
+- [Video Demo](https://www.loom.com/share/df4a46b507884d85b430d104fe6fbd39)
+- [Deployed version](https://safedime-app.onrender.com/)
 
 **[SafeDime]** is an that connects authors, posts and their comments using Ruby on Rails.
 
