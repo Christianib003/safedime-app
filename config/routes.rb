@@ -10,8 +10,8 @@ Rails.application.routes.draw do
       root 'users#welcome', as: :unauthenticated_root
     end
   end
-  resources :categories do
-    resources :payments
+  resources :categories, only: [:index, :show, :new, :create, :update, :destroy] do
+    resources :payments, only: [:index, :new, :create, :destroy]
   end
   
   root "categories#index"
