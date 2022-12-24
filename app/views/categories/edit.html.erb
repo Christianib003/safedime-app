@@ -1,0 +1,8 @@
+<div class='bg-primary p-3'>
+    <%= link_to categories_path do%>
+      <i class="fa fa-arrow-left text-white fs-2"></i>
+    <%end%>
+    <h2 class='display-4 text-white text-center mx-3'>Edit category</h2>
+</div>
+
+<%= render "shared/category_form", category: @category %>

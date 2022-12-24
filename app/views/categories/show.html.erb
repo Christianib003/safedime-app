@@ -1,0 +1,26 @@
+<%= render partial: "shared/navbar" %>
+<div class='d-flex align-items-center justify-content-around bg-primary p-3'>
+    <%= link_to categories_path do%>
+      <i class="fa fa-arrow-left text-white fs-2"></i>
+    <%end%>
+    <h2 class='display-4 text-white mx-3'>Payments</h2>
+    <%=link_to edit_category_path(@category) do%>
+      <i class="fa fa-pen-to-square text-white fs-2"></i>
+    <%end%>
+</div>
+  <div class='d-flex align-items-center justify-content-around bg-primary p-3'>
+      <p class='text-white fs-3'>Total Spent: $ <%=@amount%></p>
+
+  </div>
+<section class='container'>
+  <%if @payments.present?%>
+    <%@payments.each do |payment|%>
+      <%= render partial:'shared/payment' , locals: {payment: payment} %>
+    <%end%>
+  <%else%>
+    <p><strong>No payments added yet</strong></p>
+  <%end%>
+  <%= link_to new_category_payment_path(@category.id), class: 'btn btn-success w-100' do%>
+          <span class='fs-4'><i class="fa-solid fa-plus text-white fs-3 mx-2"></i> New Payment</span>
+  <%end%>
+</section>

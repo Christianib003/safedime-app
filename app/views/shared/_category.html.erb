@@ -1,0 +1,15 @@
+<div class="container my-3 d-flex bg-white border border-1 shadow-sm text-dark rounded justify-content-between align-items-center p-2">
+  <div class=" image-div flex-shrink-1">
+    <img src=<%=category.icon%> class="card-img-top" alt="category icon">
+  </div>
+  <div class= 'd-flex flex-column justify-content-end gap-3 text-muted'>
+    <h3 class='m-0'><strong><%=category.name%></strong></h3> 
+    <p><strong>Date:</strong> <%=category.created_at.strftime('%d-%m-%Y %H:%M')%></p>
+  </div>
+  <div class='d-flex flex-column justify-content-center align-items-end'>
+    <span><strong>Spent: $<%=category.payments.sum(:amount)%></strong></span>
+    <%= button_to category_path(category.id), method: :delete, class: 'icon' do%>
+      <strong class="text-danger">X</strong>
+    <%end%>
+  </div>
+</div>

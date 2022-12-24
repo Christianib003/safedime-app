@@ -1,0 +1,23 @@
+<%= render partial: "shared/navbar" %>
+<section class='d-flex flex-column m-0'>
+  <div class='holder pg'>
+    <h2 class='pg-title'>Categories</h2>
+  </div>
+
+  <div class="container my-3">
+    <div>
+      <%if @categories.present?%>
+      <% @categories.each do |category| %>
+          <%= link_to category, class: 'link text-dark' do %>
+            <%= render partial: 'shared/category', locals: {category: category}%>
+          <%end%>
+      <% end %>
+      <%else%>
+        <p><strong>No categories added yet</strong></p>
+      <%end%>
+    </div>
+    <%= link_to new_category_path, class: 'btn btn-success w-100 my-4' do%>
+      <span class='fs-4'><i class="fa-solid fa-plus text-white fs-3 mx-2"></i> New Category</span>
+    <%end%>
+  </div>
+</section>

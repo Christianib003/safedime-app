@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/"><span class='fs-3'>SafeDime</span></a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="small-nav">
+        <li class="nav-link">
+          <%= link_to "Home", categories_path, class:'nav-link active' %>
+        </li>
+        <li class="nav-link">
+          <%= link_to "Add category", new_category_path, class:'nav-link active' %>
+        </li>
+        <li class="nav-link">
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:'signout' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
