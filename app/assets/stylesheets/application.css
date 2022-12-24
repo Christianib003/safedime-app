@@ -1,0 +1,111 @@
+.holder {
+  text-align: center;
+}
+
+.logo {
+  font-size: 500%;
+  font-style: oblique;
+  color: #434b54;
+}
+
+.motto {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-style: oblique;
+  color: #434b54;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+}
+
+.button {
+  margin: 20px 0 20px 0;
+  background-color: #5fb523;
+  padding: 15px 0 15px 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  border: none;
+}
+
+.title {
+  font-size: 300%;
+  color: #434b54;
+}
+
+.label {
+  font-size: 20px;
+  color: #434b54;
+}
+
+.input {
+  width: 70%;
+  height: 40px;
+  margin: 0 0 30px 0;
+}
+
+.text {
+  color: #434b54;
+}
+
+.btn {
+  width: 70%;
+  color: white;
+  background-color: #5fb523;
+  border: none;
+  padding: 15px 0 15px 0;
+  margin-top: 15px;
+}
+
+.links {
+  text-decoration: none;
+  color: #3778c2;
+}
+
+.navbar {
+  background-color: #3778c2;
+}
+
+.pg-title {
+  color: white;
+}
+
+.pg {
+  background-color: #3778c2;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+.collapse {
+  height: 100vh;
+  text-align: center;
+}
+
+.small-nav {
+  list-style-type: none;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.signout {
+  background-color: white;
+  color: #434b54;
+  border: none;
+  width: 60%;
+}
+
+.nav-link {
+  color: white;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+}

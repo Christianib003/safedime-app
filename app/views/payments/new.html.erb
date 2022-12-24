@@ -1,0 +1,8 @@
+<div class='bg-primary p-3'>
+    <%= link_to category_path(params[:category_id]) do%>
+      <i class="fa fa-arrow-left text-white fs-2"></i>
+    <%end%>
+    <h2 class='display-4 text-white text-center'>New payment</h2>
+</div>
+
+<%= render partial:"shared/payment_form", locals:{payment: @payment} %>

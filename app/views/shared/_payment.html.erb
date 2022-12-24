@@ -1,0 +1,10 @@
+<div class="container my-3 d-flex bg-white border border-1 shadow-sm text-dark rounded justify-content-between align-items-center p-2">
+    <h3 class="text-uppercase text-muted flex-shrink-1"><%=payment.name %></h3>
+    <div class= 'd-flex flex-column justify-content-end gap-1 text-muted'>
+      <p class='m-0'><strong>Amount Spent:</strong> $ <%=payment.amount%></p> 
+      <p><strong>Date:</strong> <%=payment.created_at.strftime('%d-%m-%Y %H:%M')%></p>
+    </div>
+    <%= button_to category_payment_path(category_id: params[:id], id: payment.id), method: :delete, class: 'icon' do%>
+      <strong class="text-danger">X</strong>
+    <%end%>
+</div>

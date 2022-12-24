@@ -1,0 +1,44 @@
+<div class="holder">  
+  <div>
+      <%= link_to :back do%>
+        <i class="fa fa-arrow-left text-white fs-2"></i>
+      <%end%>
+      <h2 class='title'>Sign up</h2>
+  </div>
+  <div>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="mb-3">
+      <%= f.label :name, class: 'label form-label' %><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'input', placeholder: 'Full name' %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :email, class: 'label form-label' %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input', placeholder: 'Email' %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :password, class: 'label form-label' %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", class: 'input', placeholder: 'Password' %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :password_confirmation, class: 'label form-label' %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'input', placeholder: 'Confirm Password' %>
+    </div>
+
+    <div class="actions mb-3">
+      <%= f.submit "Sign up",class: 'btn' %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+  </div>
+</div>

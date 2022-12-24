@@ -1,0 +1,32 @@
+<div class="d-flex flex-column align-items-center justify-content-end mx-3">
+  <%= form_with(model: category) do |form| %>
+  <% if category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class='mb-3'>
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-control', placeholder: 'Category name' %>
+  </div>
+
+  <div class='mb-3'>
+    <%= form.label :icon, class: 'form-label' %>
+    <%= form.url_field :icon, class: 'form-control', placeholder: 'Icon URL. Example: https://cdn-icons-png.flaticon.com/512/1077/1077279.png' %>
+    <em>Please visit <a href="https://www.flaticon.com/">flaticon</a> and search for appropriate icon. Click the icon to view it.<br></em>
+    <em>Right-click on the icon and then click on the copy image address.<br> Paste the url in the above field</em>
+  </div>
+
+  <div class='mb-3'>
+    <%= form.submit 'Add category', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+</div>

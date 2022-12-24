@@ -1,0 +1,35 @@
+<div class="d-flex flex-column align-items-center justify-content-end mx-3">
+  <%= form_with(model: payment, url: category_payments_path) do |form| %>
+    <% if payment.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+        <ul>
+          <% payment.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class='mb-3'>
+      <%= form.label :name, class: 'form-label'%>
+      <%= form.text_field :name, class: 'form-control', placeholder: 'Name of the transaction' %>
+    </div>
+
+    <div class='mb-3'>
+      <%= form.label :amount, class: 'form-label' %>
+      <%= form.number_field :amount, class: 'form-control', placeholder: 'amount' %>
+    </div>
+
+    <em>If you want to add the payment to another category, select it among options below. Otherwise, leave it blank</em>
+    <div class='mb-3'>
+      <%= form.label :category, class: 'form-label' %>
+      <%= form.select :cat_id, @categories.map { |category| [category.name, category.id] }, {include_blank: true},  { class: "m-3 w-25"} %>
+    </div>
+
+    <div class='mb-3'>
+      <%= form.submit 'Add payment', class:'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
